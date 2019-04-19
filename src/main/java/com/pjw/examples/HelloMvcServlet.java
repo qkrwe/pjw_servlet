@@ -1,29 +1,31 @@
-package main.java.com.pjw.examples;
+package com.pjw.examples;
 
 import java.io.IOException;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * ¼­ºí¸´Àº µ¥ÀÌÅÍ Ã³¸®¸¸ ÇÏ°í ÆäÀÌÁö Ãâ·ÂÀº JSP¿Í °°Àº ºä ±â¼ú·Î ³Ñ±ä´Ù.
+ * ì„œë¸”ë¦¿ì€ ë°ì´í„° ì²˜ë¦¬ë§Œ í•˜ê³  í˜ì´ì§€ ì¶œë ¥ì€ JSPì™€ ê°™ì€ ë·° ê¸°ìˆ ë¡œ ë„˜ê¸´ë‹¤.
  * 
- * @author Jacob
+ * @author
  */
-public class HelloServlet extends HttpServlet {
+@WebServlet("/HelloMvc")
+public class HelloMvcServlet extends HttpServlet {
 
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// µ¥ÀÌÅÍ¸¦ ¸¸µç´Ù.
-		String name = "¹ÚÁø¿í";
+		// ë°ì´í„°ë¥¼ ë§Œë“ ë‹¤.
+		String name = "ë°•ì§„ìš±";
 
-		// µ¥ÀÌÅÍ¸¦ request¿¡ ÅÂ¿î´Ù.
+		// ë°ì´í„°ë¥¼ requestì— íƒœìš´ë‹¤.
 		request.setAttribute("name", name);
 
-		// /WEB-INF/jsp/hello.jsp·Î forward ÇÑ´Ù.
+		// /WEB-INF/jsp/hello.jspë¡œ forward í•œë‹¤.
 		request.getRequestDispatcher("/WEB-INF/jsp/hello.jsp").forward(request,
 				response);
 	}

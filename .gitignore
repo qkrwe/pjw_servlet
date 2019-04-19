@@ -6,3 +6,4 @@ gradle
 gradlew*
 settings.gradle
 db.properties
+context.xml

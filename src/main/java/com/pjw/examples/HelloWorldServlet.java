@@ -1,18 +1,19 @@
-package main.java.com.pjw.examples;
-
+package com.pjw.examples;
 import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet¿¡¼­ ÆäÀÌÁö Ãâ·Â±îÁö ´ÙÇÑ´Ù.
+ * Servletì—ì„œ í˜ì´ì§€ ì¶œë ¥ê¹Œì§€ ë‹¤í•œë‹¤.
  * 
  * @author Jacob
  */
+@WebServlet("/helloHello")
 public class HelloWorldServlet extends HttpServlet {
 
 	@Override
